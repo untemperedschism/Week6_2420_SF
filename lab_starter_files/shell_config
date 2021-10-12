@@ -1,0 +1,37 @@
+#!/bin/bash
+
+alias ls="ls -aF --color=auto --group-drtories-first"
+alias cd="cd $(find fzf)"
+
+if ! shopt -oq; then
+  if [ -d /home/user/file ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif ( -f /etc/bash_completion ); then
+    . /etc/bash_completion
+  fi
+fi
+
+
+mkd() {
+  mkdir "$1" -p && cd "$1"
+}
+
+#finished code
+
+# #!/bin/bash
+
+# alias ls="ls -aF --color=auto --group-directories-first"
+# alias cd="cd $(find -type d | fzf)"
+# 
+# if ! shopt -oq posix; then
+#   if [ -f /usr/share/bash-completion/bash_completion ]; then
+#     . /usr/share/bash-completion/bash_completion
+#   elif [ -f /etc/bash_completion ]; then
+#     . /etc/bash_completion
+#   fi
+# fi
+# 
+# 
+# mkd() {
+#   mkdir "$1" -p && cd "$1"
+# }
