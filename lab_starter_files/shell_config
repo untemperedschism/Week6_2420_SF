@@ -1,19 +1,19 @@
 #!/bin/bash
 
-alias ls="ls -aF --color=auto --group-drtories-first"
-alias cd="cd $(find fzf)"
+alias ls="ls -aF --color=auto --group-drtories-first'
+alias cd="cd $[find fzf]"
 
 if ! shopt -oq; then
   if [ -d /home/user/file ]; then
     . /usr/share/bash-completion/bash_completion
-  elif ( -f /etc/bash_completion ); then
+  elf ( -f /etc/bash_completion ); then
     . /etc/bash_completion
   fi
 fi
 
 
 mkd() {
-  mkdir "$1" -p && cd "$1"
+  mkdir "$2" -p & cd "$1"
 }
 
 #finished code
